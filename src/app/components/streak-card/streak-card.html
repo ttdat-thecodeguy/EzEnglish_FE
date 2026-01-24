@@ -1,0 +1,19 @@
+<div class="card glass-card streak-container">
+  <div class="streak-header">
+    <p class="habit-text">Duy trì thói quen học tập</p>
+    <div class="streak-badge">
+      <i class="fa-solid fa-fire"></i>
+      <span>Lửa bảy ngày</span>
+    </div>
+  </div>
+
+  <div class="days-row">
+    <div *ngFor="let day of days" class="day-item" [class.active]="day.active">
+      <div class="circle">
+        <i *ngIf="day.active" class="fa-solid fa-fire fire-mini"></i>
+        <span *ngIf="!day.active">{{ day.label }}</span>
+      </div>
+      <span class="day-label" *ngIf="day.active">{{ day.label }}</span>
+    </div>
+  </div>
+</div>

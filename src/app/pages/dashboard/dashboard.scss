@@ -1,0 +1,131 @@
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #0a092d; /* Matches your header */
+  color: white;
+}
+
+/* Base Card Styling */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.2s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Left Card Details */
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-box {
+  font-size: 40px;
+  color: #4255ff; /* Matches your plus button blue */
+  background: rgba(66, 85, 255, 0.1);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.text-content {
+  flex-grow: 1;
+}
+
+.main-label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.sub-label {
+  font-size: 0.85rem;
+  color: #a8a8b3;
+  margin-top: 8px;
+  display: block;
+}
+
+/* PrimeNG ProgressBar Override */
+::ng-deep .p-progressbar {
+  height: 8px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px !important;
+}
+
+::ng-deep .p-progressbar .p-progressbar-value {
+  background: #4255ff !important; /* Blue progress */
+}
+
+/* Right Card Details */
+.streak-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.habit-text {
+  font-size: 1rem;
+  color: #a8a8b3;
+  text-transform: capitalize;
+}
+
+.streak-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #ffcd1f, #ff9100);
+  color: #1a1d28;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(255, 205, 31, 0.3);
+  margin-top: 15px;
+}
+
+.streak-badge i {
+  font-size: 1.2rem;
+}
+
+
+/* Carousel Styling */
+.section-title { font-size: 1.5rem; margin-bottom: 20px; }
+.lesson-card {
+  background: rgba(255, 255, 255, 0.03);
+  margin: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s;
+}
+.lesson-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.08); }
+.lesson-thumb {
+  height: 140px; background: #1e1e3f; position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.play-overlay {
+  width: 40px; height: 40px; background: white; color: #0a092d;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0.8;
+}
+.lesson-info { padding: 15px; }
+.lesson-info h4 { margin: 0 0 10px 0; font-size: 1rem; }
+
+/* PrimeNG Overrides */
+::ng-deep .p-progressbar { height: 6px !important; border-radius: 10px !important; background: rgba(255,255,255,0.1) !important; }
+::ng-deep .p-carousel-prev, ::ng-deep .p-carousel-next { color: white !important; background: rgba(255,255,255,0.1) !important; border-radius: 50% !important; }

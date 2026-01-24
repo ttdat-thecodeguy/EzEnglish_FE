@@ -1,0 +1,42 @@
+<h3>Tạo dựng thói quen học tập của bạn</h3>  
+<div class="dashboard-container">
+  <div class="card glass-card">
+    <div class="card-content">
+      <div class="icon-box">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <div class="text-content">
+        <span class="main-label">Nhóm từ đang học</span>
+        <div class="progress-wrapper">
+          <p-progressBar [value]="65" [showValue]="false"></p-progressBar>
+          <span class="sub-label">65% Tiến độ thực hiện</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-streak-card></app-streak-card>
+</div>
+
+<h3>Tiếp tục bài luyện nói lần trước</h3>
+<div class="carousel-section">
+    <p-carousel [value]="listeningLessons" [numVisible]="4" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
+      <ng-template let-lesson pTemplate="item">
+        <div class="lesson-card">
+          <div class="lesson-thumb">
+            <div class="play-overlay">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <div class="lesson-info">
+            <h4>{{ lesson.title }}</h4>
+            <div class="mini-progress">
+              <p-progressBar [value]="lesson.progress" [showValue]="false"></p-progressBar>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+</div>
+
+
+<h3>Khám phá các tính năng khác</h3>

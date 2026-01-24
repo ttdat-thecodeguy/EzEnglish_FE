@@ -1,0 +1,87 @@
+.streak-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 400px;
+}
+
+.streak-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Day Row Layout */
+.days-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.day-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* The Circles */
+.circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #a8a8b3;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Active Day (Glowing Fire) */
+.day-item.active .circle {
+  background: linear-gradient(135deg, #ffcd1f, #ff9100);
+  border-color: transparent;
+  color: #1a1d28;
+  box-shadow: 0 0 15px rgba(255, 205, 31, 0.4);
+  transform: scale(1.1);
+}
+
+.fire-mini {
+  font-size: 1.2rem;
+  animation: flicker 1.5s infinite alternate;
+}
+
+.day-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffcd1f;
+}
+
+/* Habit Text & Badge from previous UI */
+.habit-text {
+  font-size: 0.9rem;
+  color: #a8a8b3;
+  margin: 0;
+}
+
+.streak-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 205, 31, 0.1);
+  color: #ffcd1f;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Simple Fire Flicker Animation */
+@keyframes flicker {
+  from { opacity: 0.8; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.1); }
+}
