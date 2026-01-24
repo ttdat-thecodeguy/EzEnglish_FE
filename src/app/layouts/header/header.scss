@@ -1,0 +1,107 @@
+/* Container Background & Layout */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0a092d; /* Dark navy background */
+  padding: 0.5rem 1.5rem;
+  height: 64px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Left Section */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Center Section: Search Bar */
+.nav-center {
+  flex-grow: 1;
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: background 0.3s ease;
+}
+
+.search-container:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.search-icon {
+  color: #a8a8b3;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.search-container input {
+  background: none;
+  border: none;
+  color: white;
+  width: 100%;
+  outline: none;
+}
+
+.search-container input::placeholder {
+  color: #a8a8b3;
+}
+
+/* Right Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.plus-btn {
+  background-color: #4255ff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.upgrade-btn {
+  background-color: #ffcd1f;
+  color: #1a1d28;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

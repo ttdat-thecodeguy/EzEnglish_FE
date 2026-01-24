@@ -1,0 +1,14 @@
+<div 
+  class="flip-card"
+  [class.is-flipped]="isFlipped"
+  (click)="toggleFlip()">
+
+  <div class="flip-card__inner">
+    <div class="flip-card__front">
+      <ng-content select="[card-front]"></ng-content>
+    </div>
+    <div class="flip-card__back">
+      <ng-content select="[card-back]"></ng-content>
+    </div>
+  </div>
+</div>
